@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 export function LikeButton({ placeId, type, likeId }) {
   const [liked, setLiked] = useState(false);
   const [currentLikeId, setCurrentLikeId] = useState(likeId);
-  const { isLoading } = useAuthContext()
+  const { isLoggedIn } = useAuthContext()
   const navigate = useNavigate();
 
   const notify = (status) => {
@@ -24,7 +24,7 @@ export function LikeButton({ placeId, type, likeId }) {
   const handleLike = async () => {
     const prev = liked;
 
-    if(isLoading) {
+    if(isLoggedIn) {
     setLiked(!liked)
     } else {
       navigate('/auth')
