@@ -11,7 +11,7 @@
 
 ## アプリURL
 
-[bookstore-cafe-map.pages.dev](https://bookstore-cafe-map.pages.dev)
+[https://bookstore-cafe-map.pages.dev](https://bookstore-cafe-map.pages.dev)
 
 ※会員登録なしでご利用いただけます。
 
@@ -31,7 +31,7 @@ PW: Test123456789
 
 以下のQiita記事にて詳しい開発背景について記載しております。ぜひご覧ください。
 
-準備中
+[Ruby on Rails × Reactでポートフォリオ制作](https://qiita.com/mamimumemo1202/items/0c67e3a36547a73c6ee5)
 
 ## 機能一覧
 
