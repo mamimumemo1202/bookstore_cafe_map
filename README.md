@@ -67,7 +67,7 @@ PW: Test123456789
 
 ## UIイメージ
 
-準備中
+![UIイメージ](./others/ui_design.gif)
 
 ## 使用技術
 
