@@ -243,7 +243,7 @@ export function SearchResultsPage() {
 
               {/* カフェカード */}
               <div className="flex-1 overflow-y-auto">
-                {isLoading && (
+                {isLoading && searchMode !== 'pair' && (
                   <>
                     <CardSkeleton />
                     <CardSkeleton />
