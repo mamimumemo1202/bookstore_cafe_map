@@ -19,8 +19,6 @@ export function useSearchQuerySync(){
                 p.set('bpid', bookstore.place_id);
             }
         }
-
-        console.log('[onBookstoreClick]', p.toString())
         setSearchParams(p);
     };
 
@@ -50,7 +48,6 @@ export function useSearchQuerySync(){
 
         p.set('mode', 'pair');
         p.set('view','cafe')
-        console.log('[onPairClick]', p.toString())
         setSearchParams(p);
     };
 
@@ -64,10 +61,8 @@ export function useSearchQuerySync(){
         p.delete('cpid')
         p.delete('bpid')
         p.set('view', 'bookstore')
-        console.log('[onChangeViewClick]', p.toString())
         } else {
         p.set('view', viewParams === 'cafe'? 'bookstore': 'cafe')
-        console.log('[else: onChangeViewClick]', p.toString())
         }
         
         setSearchParams(p);
