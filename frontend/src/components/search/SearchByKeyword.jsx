@@ -76,8 +76,9 @@ export function SearchBar({ searchMode: propSearchMode }) {
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          className="input"
+          className={`input ${isLoading? "bg-gray-300" : ""}`}
           placeholder="例：神保町駅"
+          disabled={isLoading}
         />
         <button type="submit">
           {isLoading? 
