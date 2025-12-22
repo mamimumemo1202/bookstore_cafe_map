@@ -125,12 +125,12 @@ class GooglePlacesClient
 
   def ensure_google_ok!(json)
     case json["status"]
-    when "OK", "ZERO_RESULTS" then nil
+    when "OK", "ZERO_RESULTS", "NOT_FOUND" then nil
     when "OVER_QUERY_LIMIT"    then raise ExternalApiErrors::RateLimited, json["error_message"]
     when "REQUEST_DENIED"      then raise ExternalApiErrors::AuthError,   json["error_message"]
     when "INVALID_REQUEST"     then raise ExternalApiErrors::BadRequest,  json["error_message"]
-    when "NOT_FOUND"           then raise ExternalApiErrors::NotFound,    json["error_message"]
-    else                           raise ExternalApiErrors::UpstreamError, (json["status"] || "unknown status")
+    when "UNKNOWN_ERROR"       then raise ExternalApiErrors::UpstreamError, json["error_message"]
+    else                            raise ExternalApiErrors::UpstreamError, (json["status"] || "unknown status")
     end
   end
 end
